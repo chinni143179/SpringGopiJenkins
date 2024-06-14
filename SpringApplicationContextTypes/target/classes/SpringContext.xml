@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context">
+    
+    <bean id="car" class="com.gopi.SpringApplicationContextTypes.beans.CI.Car">
+        <property name="engine" ref="engine"></property>
+    </bean>
+  <bean id="car1" class="com.gopi.SpringApplicationContextTypes.beans.CI.Car">
+	<constructor-arg><ref bean="engine"> </ref>	</constructor-arg>
+       </bean>   
+      <bean id="engine" class="com.gopi.SpringApplicationContextTypes.beans.CI.Engine">
+    </bean>
+</beans>
